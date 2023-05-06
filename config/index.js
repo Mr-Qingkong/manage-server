@@ -1,4 +1,4 @@
 module.exports = {
-    baseUrl:'mongodb://127.0.0.1:27017/manger',
+    baseUrl:'mongodb://127.0.0.1:27017/VehicleManager',
     tokenKey:'JIEWJICMOQPOREGKOPBOWERF'
 }

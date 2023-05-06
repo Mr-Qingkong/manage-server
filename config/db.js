@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 const config = require('./index');
 const log4js = require('../utils/log4js');
 mongoose.connect(config.baseUrl);
+mongoose.set('useFindAndModify', false);
 var db = mongoose.connection;
 db.on('error', ()=>{
     log4js.error('数据库连接失败...');
