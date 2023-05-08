@@ -15,6 +15,8 @@ const menu = require('./routes/menu')
 const roles = require('./routes/roles')
 const dept = require('./routes/dept')
 const leaves = require('./routes/leaves')
+const vehi = require('./routes/vehi')
+const car_application = require("./routes/car_application")
 const config = require('./config')
 
 require('./config/db')
@@ -69,6 +71,8 @@ router.use(menu.routes(),menu.allowedMethods());
 router.use(roles.routes(),roles.allowedMethods());
 router.use(dept.routes(),dept.allowedMethods());
 router.use(leaves.routes(),leaves.allowedMethods());
+router.use(vehi.routes(),vehi.allowedMethods());
+router.use(car_application.routes(),car_application.allowedMethods());
 //全局加载一下一级路由
 app.use(router.routes(), router.allowedMethods())
 
